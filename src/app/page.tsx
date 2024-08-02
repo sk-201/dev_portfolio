@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-[#3b3b3b] h-screen">
+    <div className="bg-[#3b3b3b] h-screen py-20 px-10">
       <ProfileSection />
     </div>
   );
