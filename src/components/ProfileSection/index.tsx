@@ -7,7 +7,7 @@ const ProfileSection = () => {
     { id: 4, name: "Project" },
   ];
   return (
-    <div className=" w-72  h-full border-2 border-red-600 pt-20 px-10 ">
+    <div className=" w-72  h-full pt-20 px-10  ">
       <div>
         <div className="border-2 border-slate-200  text-center w-full py-10">
           <Image
@@ -18,13 +18,19 @@ const ProfileSection = () => {
             className="m-auto"
           />
         </div>
+        <h1 className="text-brightGray font-bold  text-2xl mt-2 text-center ">
+          Mohd Salar Khan
+        </h1>
+        <h2 className="text-brightGray  font-medium text-center">
+          Software Developer
+        </h2>
       </div>
       <div className="mt-10">
         {profile_items.map((item) => {
           return (
             <p
               key={item.id}
-              className="text-white border-2 border-amber-600 text-center py-2"
+              className="text-brightGray rounded-md mt-4 border-2 border-lightGray text-center py-2"
             >
               {item.name}
             </p>
