@@ -19,6 +19,8 @@ const config: Config = {
       brightGray: "#d9d5d4",
       background: "#0b0e21",
       amber: "#d97706",
+      darkGray: "#54545f",
+      white: "#f1f1f1",
     },
   },
   plugins: [],

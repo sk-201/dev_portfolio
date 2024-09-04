@@ -1,15 +1,21 @@
+"use client";
 import Image from "next/image";
 const ProfileSection = () => {
-  const profile_items: { id: number; name: string }[] = [
-    { id: 1, name: "About" },
-    { id: 2, name: "Skills" },
-    { id: 3, name: "Contact" },
-    { id: 4, name: "Project" },
+  const profile_items: { id: number; name: string; s_id: string }[] = [
+    { id: 1, name: "About", s_id: "about" },
+    { id: 2, name: "Skills", s_id: "skills" },
+    { id: 3, name: "Projects", s_id: "project" },
+    { id: 4, name: "Contact", s_id: "contact" },
   ];
+  const scrollToSection = (s_id: string) => {
+    if (typeof window !== "undefined") {
+      document.getElementById(s_id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <div className=" w-72  h-full pt-20 px-10  ">
+    <div className=" w-72  h-[550px] mb-20 px-10 border-2 border-lightGray  rounded-xl  ">
       <div>
-        <div className="border-2 border-slate-200  text-center w-full py-10">
+        <div className=" mt-10 border-2 border-slate-200  text-center w-full py-10">
           <Image
             src="/favicon.ico"
             width={45}
@@ -30,9 +36,11 @@ const ProfileSection = () => {
           return (
             <p
               key={item.id}
-              className="text-brightGray rounded-md mt-4 border-2 border-lightGray text-center py-2"
+              className="text-amber lg:hover:bg-white lg:hover:font-bold lg:hover:text-xl cursor-pointer rounded-md mt-4 border-2 border-lightGray text-center py-2"
+              onClick={() => scrollToSection(item.s_id)}
             >
               {item.name}
+              {/* <a href={`#${item.s_id}`}> {item.name}</a> */}
             </p>
           );
         })}

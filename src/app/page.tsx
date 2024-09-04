@@ -3,8 +3,8 @@ import ProfileSection from "@/components/ProfileSection";
 
 export default function Home() {
   return (
-    <div className="bg-background h-full py-20 px-10  ">
-      <div className="border-2 border-lightGray flex rounded-xl">
+    <div className="bg-background h-full py-20 px-10   ">
+      <div className=" flex flex-col lg:flex-row items-center lg:items-start">
         <ProfileSection />
         <InfoSection />
       </div>
